@@ -1,0 +1,58 @@
+.topbox{
+    display: flex;
+    justify-content: center;
+}
+
+.topbox .box:nth-child(1){
+    height: 100px;
+    width: 20%;
+    background-color: #f4eb49;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.topbox .box:nth-child(2){
+    height: 100px;
+    width: 80%;
+    background-color: coral;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.midbox{
+    display: flex;
+    justify-content: center;
+}
+
+.midbox .blok:nth-child(1){
+    height: 300px;
+    width: 20%;
+    background-color: #aedd94;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.midbox .blok:nth-child(2){
+    height: 300px;
+    width: 60%;
+    background-color: grey;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.midbox .blok:nth-child(3){
+    height: 300px;
+    width: 20%;
+    background-color: aqua;
+    border: 2px solid black;
+    margin: 5px;
+}
+
+.botbox{
+    height: 100px;
+    width: 100%;
+    background-color: blue;
+    border: 2px solid black;
+    margin: 5px;
+
+}
