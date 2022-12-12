@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation</title>
+
+    <style>
+        .container{
+            background-color: rgb(58, 56, 56);
+            margin: 80px 500px 50px 500px;
+            width: 350px;
+            padding: 10px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .container form input{
+            width: 90%;
+            padding: 5px;
+            border: none;
+            border-bottom: 1px solid white;
+            background-color: rgb(58, 56, 56);
+            color: white;
+        }
+
+    </style>
+
+</head>
+<body style="background-color: rgb(156, 154, 154);">
+
+    <div class="container">
+        <form onsubmit="return false">
+            <h1 style="text-align: center;">Tugas Form Validation</h1>
+            <label for="nama">Masukkan Nama Anda :</label>
+            <br>
+            <input type="text" id="nama" placeholder="Masukkan Nama Anda" required><span id="errornama"></span>
+            <br>
+    
+            <label for="email">Masukkan Email Anda :</label>
+            <br>
+            <input type="email" id="email" placeholder="Masukkan Email Anda" required><span id="erroremail"></span>
+            <br>
+    
+            <label for="jam">Jam Keberangkatan Anda :</label>
+            <br>
+            <input type="time" id="jam" required><span id="errorjam"></span>
+            <br>
+    
+            <label for="tujuan">Tujuan Anda :</label>
+            <br>
+            <input type="text" id="tujuan" placeholder="Masukkan Tujuan Anda" required><span id="errortujuan"></span>
+            <br>
+    
+            <label for="tiket">Berapa Pesanan Tiket Anda</label>
+            <select id="tiket" required>
+                <option value="">Silahkan Pilih</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
+                <option value="6">6</option>
+                <option value="7">7</option>
+                <option value="8">8</option>
+                <option value="9">9</option>
+                <option value="10">10</option>
+            </select><span id="errortiket"></span>
+            <br>
+    
+            <button onclick="formvalidation()">Pesan Sekarang</button>
+    
+        </form>
+
+        <div>
+            <h1 id="inputhasil"></h1>
+            <p id="inputnama"></p>
+            <p id="inputemail"></p>
+            <p id="inputjam"></p>
+            <p id="inputtujuan"></p>
+            <p id="inputtiket"></p>
+        </div>
+    
+    
+    </div>
+
+    
+    
+    <script>
+        function formvalidation(){
+            let nama = document.getElementById('nama').value;
+            let email = document.getElementById('email').value;
+            let jam = document.getElementById('jam').value;
+            let tujuan = document.getElementById('tujuan').value;
+            let tiket = document.getElementById('tiket').value;
+
+            if (nama == ''){
+                document.getElementById('errornama').innerHTML = 'Masukkan Nama';
+                document.getElementById('errornama').style ='color : red';
+            }
+            
+            if (email == ''){
+                document.getElementById('erroremail').innerHTML = 'Masukkan Email';
+                document.getElementById('erroremail').style ='color : red';
+
+            }
+
+            if (jam == ''){
+                document.getElementById('errorjam').innerHTML = 'Masukkan Jam';
+                document.getElementById('errorjam').style ='color : red';
+
+            }
+
+            if (tujuan == ''){
+                document.getElementById('errortujuan').innerHTML = 'Masukkan Tujuan';
+                document.getElementById('errortujuan').style ='color : red';
+
+            }
+
+            if (tiket == ''){
+                document.getElementById('errortiket').innerHTML = 'Masukkan Tiket';
+                document.getElementById('errortiket').style ='color : red';
+
+            }
+
+            else{
+                document.getElementById('inputhasil').innerHTML = "Hasil Validasi";
+                document.getElementById('inputnama').innerHTML = "Nama Anda :"+nama;
+                document.getElementById('inputemail').innerHTML = "Email Anda :"+email;
+                document.getElementById('inputjam').innerHTML = "Jam Keberangkatan Anda :"+jam;
+                document.getElementById('inputtujuan').innerHTML = "Tujuan Anda :"+tujuan;
+                document.getElementById('inputtiket').innerHTML = "Jumlah Tiket yang Anda pesan :"+tiket;
+            }
+        }
+    </script>
+
+</body>
+</html>

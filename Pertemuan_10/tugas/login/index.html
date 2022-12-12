@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="otentikasi.js"></script>
+
+    <style>
+        .container{
+            background-color: rgb(58, 56, 56);
+            margin: 200px 500px 50px 500px;
+            width: 350px;
+            padding-left: 10px;
+            border-radius: 10px;
+            color: white;
+        }
+
+        .container form input{
+            width: 90%;
+            padding: 5px;
+            border: none;
+            border-bottom: 1px solid white;
+            background-color: rgb(58, 56, 56);
+            color: white;
+        }
+
+        .container button{
+            margin: 20px 255px;
+            width: 20%;
+            height: 30px;
+            background-color: #2979ff;
+        }
+    </style>
+
+</head>
+<body style="background-color: rgb(156, 154, 154);">
+    
+
+    <div class="container">
+        <form onsubmit="kirim()" id="form">
+            <h1 style="text-align: center;">Silahkan Login</h1><br>
+            <label for="username">Masukkan Username</label><br>
+            <input type="text" name="username" id="username"/><br>
+            <label for="password">Masukkan Password</label><br>
+            <input type="password" name="password" id="password" /><br>
+            <button type="submit">Login</button><hr>
+
+    
+             <p>Masukkan sesuai ketentuan berikut :</p>
+             <p>Username : @bagusachmad</p>
+             <p>Password : gus.id</p>
+    
+        </form>
+    </div>
+    
+</body>
+</html>
