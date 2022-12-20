@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat</title>
+    <style>
+
+        body{
+            background-color: whitesmoke;
+        }
+
+      .container {
+        border: 1px solid black;
+        height: 30%;
+        width: 20%;
+        position: fixed;
+        left: 35%;
+        top: 25%;
+      }
+      .inp {
+        width: 90%;
+      }
+
+      .chat {
+        width: 100%;
+        height: 180px;
+        background-color: b;
+      }
+
+      .pesan {
+        display: flex;
+      }
+
+      button {
+        width: 30%;
+      }
+
+      
+    </style>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="chat" id="msg"></div>
+      <div class="pesan">
+        <input type="text" class="inp" id="masukpesan" onfocus="this.value=''">
+        <button onclick="chat()">Kirim</button>
+      </div>
+    </div>
+
+    <script>
+        function chat() {
+          let elemen, teks, parent, spasi;
+          let masukpesan = document.getElementById("masukpesan").value;
+          elemen = document.createElement("span");
+          spasi = document.createElement("br");
+          teks = document.createTextNode(masukpesan);
+  
+          elemen.appendChild(teks);
+  
+          parent = document.getElementById("msg");
+          parent.appendChild(spasi);
+          parent.appendChild(elemen);
+        }
+      </script>
+
+  </body>
+</html>

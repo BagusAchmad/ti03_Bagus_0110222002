@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menghitung Kurs Rupiah</title>
+    <style>
+        .border{ 
+        border: 2px solid black;
+        }
+
+        td{
+            border: 2px solid black;
+        }
+
+        th{
+            border: 2px solid black;
+        }
+    </style>
+</head>
+<body style="background-color: antiquewhite;">
+    <form action="">
+        <fieldset style="margin-right: 100%;">
+            <legend>Menghitung Kurs Rupiah - Mata Uang Asing</legend>
+            <table class="border">
+
+                <thead>
+                    <th>Masukkan Nilai</th>
+                    <th>Pilih Mata Uang Yang Ingin Kamu Konversikan</th>
+                    <th>Hasil Konversi Ke Rupiah</th>
+                </thead>
+
+                <tbody>
+                    <td><input type="number" id="uang" onchange="kurs()"></td>
+                    <td>
+                        <select name="" id="pilihan" onchange="kurs()">
+                        <option value=""hidden>---Pilih---</option>
+                        <option value="usd">Dolar US</option>
+                        <option value="sd">Dolar Singapur</option>
+                        <option value="rm">Ringgit Malaysia</option>
+                        <option value="yen">Yen Jepang</option>
+                        <option value="eu">Euro</option>
+                        <option value="riyal">Riyal Arab Saudi</option>
+                        </select>
+                    </td>
+                    <td>
+                        <input type="text" id="hitung">
+                    </td>
+                    
+                </tbody>
+
+            </table>
+        </fieldset>
+    </form>
+
+    <script>
+        function kurs(){
+            let uangmasuk = document.getElementById("uang").value;
+            let matauang = document.getElementById("pilihan").value;
+            let koversi;
+
+            if (matauang == "usd"){
+                konversi = uangmasuk * 9915;
+                document.getElementById("hitung").value = konversi;
+            }
+
+            else if (matauang == "sd"){
+                konversi = uangmasuk * 13472;
+                document.getElementById("hitung").value = konversi;
+            }
+
+            else if (matauang == "rm"){
+                konversi = uangmasuk * 874;
+                document.getElementById("hitung").value = konversi;
+            }
+
+            else if (matauang == "yen"){
+                konversi = uangmasuk * 120;
+                document.getElementById("hitung").value = konversi;
+            }
+
+            else if (matauang == "eu"){
+                konversi = uangmasuk * 15888;
+                document.getElementById("hitung").value = konversi;
+            }
+
+            else if (matauang == "riyal"){
+                konversi = uangmasuk * 3592;
+                document.getElementById("hitung").value = konversi;
+            }
+
+            else {
+                konversi = "Anda Belum Memilih";
+                document.getElementById("hitung").value = konversi
+            }
+        }
+    </script>
+
+</body>
+</html>
